@@ -1,0 +1,13 @@
+person:
+  name: John
+  age: 23
+  hobbies:
+    - sports
+    - Youtube
+    - hiking
+  address:
+    - street: 23 Alexandra street.
+    - city: Port Hracourt
+  experience:
+    - title: Junior Cloud Eng
+    - period: July 2023 - March 2024
