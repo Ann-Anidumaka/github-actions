@@ -8,3 +8,5 @@ Build laptop:
           - cat build/computer.txt
           - echo "Keyboard" >> build/computer.txt
           - cat build/computer.txt
+          - echo "Mouse"
+          - cat build/computer.txt
