@@ -1,7 +1,7 @@
 Build laptop:
     image: alpine
     script: 
-          - echo "Building a laptop"
+          - echo "Building laptops"
           - mkdir build
           - touch build/computer.txt
           - echo "Mainboard" >> build/computer.txt
