@@ -1,21 +1,23 @@
 stages:
     - build
     - test
-
+    
+variables:
+    BUILD_FILE_NAME: laptop.txt
 
 Build laptop:
     image: alpine
     stage: build
     script: 
-          - echo "Building laptops"
-          - mkdir build
-          - touch build/computer.txt
-          - echo "Mainboard" >> build/computer.txt
-          - cat build/computer.txt
-          - echo "Keyboard" >> build/computer.txt
-          - cat build/computer.txt
-          - echo "Mouse" >> build/computer.txt
-          - cat build/computer.txt
+        - echo "Building laptops"
+        - mkdir build
+        - touch build/$BUILD_FILE_NAME
+        - echo "Mainboard" >> build/$BUILD_FILE_NAME
+        - cat build/$BUILD_FILE_NAME
+        - echo "Keyboard" >> build/$BUILD_FILE_NAME
+        - cat build/$BUILD_FILE_NAME
+        - echo "Mouse" >> build/$BUILD_FILE_NAME
+        - cat build/$BUILD_FILE_NAME
     artifacts:
         paths:
             - build
@@ -26,7 +28,7 @@ test laptop:
     image: alpine
     stage: test
     script:
-        - test -f build/computer.txt
-        - grep "Mainboard" build/computer.txt
-        - grep "Mouse" build/computer.txt
+        - test -f build/$BUILD_FILE_NAME
+        - grep "Mainboard" build/$BUILD_FILE_NAME
+        - grep "Mouse" build/$BUILD_FILE_NAME
     
