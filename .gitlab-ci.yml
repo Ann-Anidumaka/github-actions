@@ -1,5 +1,11 @@
+stages:
+    - build
+    - test
+
+
 Build laptop:
     image: alpine
+    stage: build
     script: 
           - echo "Building laptops"
           - mkdir build
@@ -10,3 +16,15 @@ Build laptop:
           - cat build/computer.txt
           - echo "Mouse"
           - cat build/computer.txt
+    artifacts:
+        paths:
+            - build
+
+
+
+test laptop:
+    image: alpine
+    stage: test
+    script:
+        - test -f build/computer.txt
+    
