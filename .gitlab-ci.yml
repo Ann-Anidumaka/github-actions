@@ -14,7 +14,7 @@ Build laptop:
           - cat build/computer.txt
           - echo "Keyboard" >> build/computer.txt
           - cat build/computer.txt
-          - echo "Mouse"
+          - echo "Mouse" >> build/computer.txt
           - cat build/computer.txt
     artifacts:
         paths:
